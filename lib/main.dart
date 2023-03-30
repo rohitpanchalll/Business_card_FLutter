@@ -9,9 +9,10 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        backgroundColor: Colors.teal,
+        backgroundColor: Colors.blueGrey,
         body: SafeArea(
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
               CircleAvatar(
                 backgroundImage: AssetImage('images/rohit.jpg'),
@@ -34,6 +35,40 @@ class MyApp extends StatelessWidget {
                   letterSpacing: 2.5,
                   fontSize: 10.0,
                   fontFamily: 'SourceSansPro',
+                ),
+              ),
+              SizedBox(
+                height: 10.0,
+                child: Divider(
+                  color: Colors.white,
+                  thickness: 1,
+                ),
+              ),
+
+              //info section
+              Card(
+                color: Colors.white,
+                margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 10.0),
+                child: ListTile(
+                  leading: Icon(
+                    Icons.phone,
+                    color: Colors.blue,
+                  ),
+                  title: Text("+91 7391902254"),
+                ),
+              ),
+              SizedBox(
+                height: 10.0,
+              ),
+              Card(
+                color: Colors.white,
+                margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 10.0),
+                child: ListTile(
+                  leading: Icon(
+                    Icons.email,
+                    color: Colors.blue,
+                  ),
+                  title: Text("panchalrohit0021@gmail.com"),
                 ),
               ),
             ],
